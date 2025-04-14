@@ -11,7 +11,12 @@ class FavoritesScreen extends ConsumerWidget {
     final likedMovies = ref.watch(likedMoviesProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Favorites')),
+      appBar: AppBar(
+        title: Text(
+          'Favorites',
+          style: Theme.of(context).textTheme.headlineMedium,
+        ),
+      ),
       body:
           likedMovies.isEmpty
               ? const Center(
