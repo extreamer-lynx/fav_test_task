@@ -23,11 +23,15 @@ class FavoritesScreen extends ConsumerWidget {
               : Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2, // Number of columns
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount:
+                        MediaQuery.of(context).orientation ==
+                                Orientation.portrait
+                            ? 2
+                            : 4,
                     crossAxisSpacing: 8.0,
                     mainAxisSpacing: 8.0,
-                    childAspectRatio: 0.56, // Adjust for poster aspect ratio
+                    childAspectRatio: 0.56,
                   ),
                   itemCount: likedMovies.length,
                   itemBuilder: (context, index) {

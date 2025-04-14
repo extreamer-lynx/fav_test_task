@@ -64,7 +64,7 @@ class FilmListScreenState extends ConsumerState<FilmListScreen> {
           actions: [
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop();
               },
               child: const Text('Cancel'),
             ),
@@ -81,7 +81,7 @@ class FilmListScreenState extends ConsumerState<FilmListScreen> {
                       .read(moviePaginationProvider.notifier)
                       .fetchMovies(paginate: false);
                 }
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop();
               },
               child: const Text('Search'),
             ),

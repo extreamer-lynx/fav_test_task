@@ -25,8 +25,6 @@ class FadeAnimatedTheme extends ImplicitlyAnimatedWidget {
   final bool isMaterialAppTheme;
 
   /// The widget below this widget in the tree.
-  ///
-  /// {@macro flutter.widgets.child}
   final Widget child;
 
   @override

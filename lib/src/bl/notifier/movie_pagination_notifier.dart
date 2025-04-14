@@ -64,7 +64,7 @@ class MoviePaginationNotifier extends StateNotifier<MoviePaginationState> {
           totalPages: 0,
         ),
       ) {
-    fetchMovies(); // Initial fetch
+    fetchMovies();
   }
 
   /// Fetches movies from the API.
